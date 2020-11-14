@@ -9,7 +9,7 @@ Installation:
 
 Summary:
 
-- This is a responsive web page using javascript and jQuery
+- This is a responsive web page using javascript & jQuery that allows a user to store tasks on a timeline for the day
 
 Usage:
 
