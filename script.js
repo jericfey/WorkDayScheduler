@@ -1,21 +1,28 @@
 $("document").ready(function () {
-  function getDay() {
-    let date = new Date();
-    let weekDay = new Array(7);
-    weekDay[0] = "Sunday";
-    weekDay[1] = "Monday";
-    weekDay[2] = "Tuesday";
-    weekDay[3] = "Wednesday";
-    weekDay[4] = "Thursday";
-    weekDay[5] = "Friday";
-    weekDay[6] = "Saturday";
-    console.log(date);
-    console.log(weekDay);
 
-    let currentDay = weekDay[date.getDay()];
-    $("#currentDay").text(currentDay);
+ // $(`#${i}`).siblings('textarea).val(localstorage.get(i))
+    
+  used moment.js to format day of week and today's date and append to id="currentDay"
+    let NowMoment = moment();
+    let eDisplayMoment = document.getElementById("current-day");
+    eDisplayMoment.innerHTML = NowMoment.format("[Today is: ] dddd M-D-YYYY");
 
-    console.log(currentDay);
-    // document.getElementById("currentDay").innerHTML;
-  }
+  //VARIABLES
+  //   let currentHour = NowMoment.format("H");
+  //   console.log("currentHour: ", currentHour);
+
+  //   let pastHours = [];
+  //   let futureHours = [];
+
+  //loop through every hour in the day and build an input for it
+  //   hours.forEach(buildPlanner);
+
+  $(".save-button").on("click", function () {
+    let time = $(this).attr("id");
+    // console.log(time);
+
+    let task = $(this).siblings("textarea").val();
+    console.log(time, task);
+    localStorage.setItem(time, task);
+  });
 });
