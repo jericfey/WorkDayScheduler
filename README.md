@@ -13,7 +13,7 @@ Summary:
 
 Usage:
 
--
+- Type in a task for each hour during the work day to plan events throughout the day
 
 Screenshots:
 ![WorkDayScheduler Screenshot1](./assets/Screenshot1.jpg)
